@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Basic body styles */
+    html {
+        scroll-behavior: smooth;
+      }
+
+      #about, #projects, #skills, #experience, #contact {
+        
+        padding-top: 50px; /* Adjust as needed */
+        margin-top: -50px; /* Adjust to offset the padding */
+      }
+      
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      
+      /* Example background color */
+    }
+    .bg-image {
+        background-image: url('pics/bg.jpg');
+        background-size: cover;
+        /* ...other styles... */
+       }
+    
+    /* Navbar styles */
+    .navbar {
+        background: linear-gradient(45deg, #4CAF50, #2196F3);
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .8);
+      font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    }
+  
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  
+    /* Custom font style */
+    .custom-font {
+      font-family: 'Merriweather', serif; /* Fallback fonts should be added */
+    }
+  
+    /* Underline effect for headings */
+    .custom-underline {
+      text-decoration: underline;
+      text-decoration-color: #FFC107; /* Example underline color */
+      text-decoration-thickness: 2px;
+    }
+  
+    /* Card hover effect */
+    .card {
+      transition: transform .2s;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    }
+    
+      .card-body {
+        height: 200px; /* Adjust the height as needed */
+      }
+      
+      .card-img-top {
+        object-fit: cover;
+        height: 150px; /* Adjust the height as needed */
+      }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    /* Vertical timeline styles */
+.timeline {
+    position: relative;
+    margin-left: 30px; /* Adjust as needed */
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: calc(100% - 20px); /* Adjust as needed */
+    
+    background: #6C757D; /* Adjust line color */
+    left: 20px; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
+  }
+  
+  .event {
+    position: relative;
+    padding-left: 30px; /* Adjust as needed */
+  }
+  
+  .event::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    /*background: #343a40;  Example dot color */
+    background: #6C757D; /* Adjust dot color */
+    border: 2px solid #343a40; /* Adjust border color */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px; /* Adjust as needed */
+  }
+  
+    /* Footer styles */
+    .footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px 0;
+    }
+   
+    .footer img {
+        margin-right: 20px;
+        filter: grayscale(100%); /* Desaturate the icons */
+        transition: filter 0.3s ease-in-out;
+    }
+    .footer img:hover {
+        filter: grayscale(0%); /* Restore color on hover */
+    }
+    
+    
+  
+    /* Background gradient for the main area */
+    .bg-gradient {
+      background: linear-gradient(45deg, #83a4d4, #b6fbff); /* Example gradient background */
+    }
+  
+    /* Set the images to be fully responsive */
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Add padding and margin tweaks as needed */
+    
+    .my-5 {
+        margin-top: 2rem!important;
+        margin-bottom: 2rem!important;
+    }
+  
+    .mt-5 {
+      margin-top: 3rem!important;
+    }
+  
+    .pt-5 {
+      padding-top: 3rem!important;
+    }
+  
+    /* Section specific styles */
+    #about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Utility classes for layout */
+    .w-50 {
+      width: 50%;
+    }
+  
+    /* Corrections for previous mistakes */
+    .col-md-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    
+    .col-lg-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+  
+    .mb-3 {
+      margin-bottom: 1rem!important;
+    }
+  
+    .text-light {
+      color: #f8f9fa!important;
+    }
+  </style>
+  
+</head>
+<body class="bg-gradient">
+    <div class="bg-image">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">Saketh Dathrika</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <section id="about" class="d-flex justify-content-between align-items-start">
+      <div class="w-50">
+        <h1 class="custom-font custom-underline mb-4">About Me</h1>
+        <p>I am Saketh Dathrika, a dedicated data scientist with a Master of Science in Data Science from Northeastern University and a 
+            Bachelor's in ECE from GRIET, Hyderabad. My academic journey has equipped me with a 
+            CGPA of 3.8/4.00 and a rich set of skills in data management, machine learning, NLP, computer vision, algorithms, and more.
+        </p>
+        <p>My technical toolkit encompasses programming languages such as Python, R, SQL, and more.
+             I hold certifications in AWS, showcasing my commitment to continuous learning and mastery of cloud-based technologies.
+             Complementing my professional journey are diverse projects, which you can find by exploring my portfolio.</p>
+        <p>
+            I delve into my passion for turning data into actionable insights. I am driven by a commitment 
+            to innovation, ceaseless learning, and a collaborative spirit in dynamic environments. Together, 
+            let's unravel the potential of data to address real-world challenges and contribute positively to our ever-evolving society.</p>
+      </div>
+      <div class="w-50">
+        <!-- Placeholder for future image -->
+        <img src="pics/intro.png" alt="placeholder" class="img-fluid" id="aboutImage">
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="projects" class="my-5">
+      <h1 class="custom-font custom-underline mb-4">Projects</h1>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="pics/restaurant.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="pics/summarization.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's  content.</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="pics/recommendation.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      
+        
+          <section id="experience" class="my-5">
+            <h1 class="custom-font custom-underline mb-4">Experience</h1>
+            <div class="timeline">
+              <div class="event">
+                <h2 class="h5 custom-font">Here Technologies, Chicago, US</h2>
+                <p>Data Science Intern</p>
+                <p>Aug. 2022 - Dec. 2022</p>
+                <ul>
+                    <li>Acquired proficiency in utilizing a U-NET model to analyze and process satellite images for identifying road surfaces, stop lines, and yield indicators using creative data augmentation methods, improving model’s performance by 10%.</li>
+                    <li>Spearheaded the STEGO project, employing unsupervised learning techniques for image segmentation of road surfaces without labeled data.</li>
+                    <li>Enriched the STEGO model by incorporating the DLinkNet framework to streamline the identification of road surfaces and crosswalks, significantly minimizing the need for manual labeling. This enhancement led to a remarkable 15% increase in precision compared to the standalone STEGO model.</li>
+                    <li>Reduced the inference time taken by the model by 75% to get the image segmentations using CUDA with Torch-TensorRT.</li>
+                  </ul>
+              </div>
+              <div class="event">
+                <h2 class="h5 custom-font">Cognizant Technology Solutions, Hyderabad, India</h2>
+                <p>Data Scientist</p>
+                <p>Dec. 2020 - July 2021</p>
+                <ul>
+                    <li>Evaluated multiple classification models (Logistic, SVM, XGBoost) to identify the optimal predictor for health insurance benefit utilization in the next 3-6 months.</li>
+                    <li>Conducted extensive data exploration on customer profiles, claims, and medical data within the AWS Redshift environment and leveraged Databricks for in-depth analysis to discover utilization drivers and customer behavior patterns.</li>
+                    <li>Engineered features like time since last claim, doctor visits in the last year, and pre-existing rules to enhance model accuracy.</li>
+                    <li>Collaborated closely with Marketing and Engineering teams to deploy machine learning and predictive analytics solutions at scale, utilizing advanced SQL queries for data extraction and transformation resulting in 88% F1 Score.</li>
+                    <li>Produced model interpretation reports for stakeholders, deployed predictions to databases, and created Tableau dashboards for user access while recommending model and estimating $2M annual cost savings.</li>
+                  </ul>
+              </div>
+              <div class="event">
+                <h2 class="h5 custom-font">Tatwa Infocom, Hyderabad, India</h2>
+                <p>Software Engineer Intern (Data Science)</p>
+                <p>Mar. 2018 - Feb. 2020</p>
+                <ul>
+                    <li>Conducted sales forecasting for a local shopping company client, implementing statistical techniques like ARIMA and Prophet to optimize business strategies and decision-making processes.</li>
+                    <li>Implemented large-scale data processing using Apache Spark, which efficiently managed the company's growing data and reduced the processing time by 30%.</li>
+                    <li>Applied A/B testing methodologies to evaluate multiple forecasting approaches, ensuring accurate prediction outcomes.</li>
+                    <li>Collaborated with stakeholders, integrating KPIs achieving a 92.5% accuracy rate driving to data-driven improvements.</li>
+                    <li>Executed precise SQL queries and data manipulation on databases, extracting key data. This streamlined forecasting, yielding strategic insights and boosting data retrieval speed by 15%.</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+      
+
+    <section id="skills" class="my-5">
+      <h1 class="custom-font custom-underline mb-4">Skills</h1>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-3">
+          <h2 class="h5 custom-font">Programming Languages</h2>
+          <ul class="list-unstyled">
+            <li>Python</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>MongoDB</li>
+            <li>JavaScript</li>
+            <!-- More items -->
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <h2 class="h5 custom-font">Libraries</h2>
+          <ul class="list-unstyled">
+            <li>Sklearn</li>
+            <li>Pandas</li>Sklearn, CV2, Numpy, Pandas, Keras, Tensorflow, Xgboost, Pytorch, Seaborn, Matplotlib
+            <li>Numpy</li>
+            <li>Keras</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Xgboost</li>
+            <li>Seaborn</li>
+            <li>Matplotlib</li>
+            <li>CV2</li>
+            <!-- More items -->
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <h2 class="h5 custom-font">Tools Used</h2>
+          <ul class="list-unstyled">
+            <li>Colab</li>
+            <li>Jupyter Notebook</li>
+            <li>Excel</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Spark</li>
+            <li>AWS</li>
+            <li>GCP</li>
+            <li>DataBricks</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <!-- More items -->
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <h2 class="h5 custom-font">Certifications</h2>
+          <ul class="list-unstyled">
+            <!-- Add certification items here -->
+            <li>AWS Certified Machine Learning Specialty</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>Generative AI with LLM's</li>
+            <li>IBM professional Data Science</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <footer id="contact" class="footer text-center text-light">
+      <div class="container">
+        <a href="https://www.linkedin.com/in/saketh-dathrika/" target="_blank">
+            <img src="pics/linkedin.png" alt="LinkedIn Logo" width="50" height="50">
+          </a>
+          <a href="https://github.com/Saketh991" target="_blank">
+            <img src="pics/github.png" alt="GitHub Logo" width="50" height="50">
+          </a>
+          <a href="mailto:dathrika.s@northeastern.edu">
+            <img src="pics/email.png" alt="Email Logo" width="50" height="50">
+        
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
