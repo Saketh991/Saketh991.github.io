@@ -26,10 +26,11 @@
       /* Example background color */
     }
     .bg-image {
-        background-image: url('pics/bg.jpg');
+        
         background-size: cover;
         /* ...other styles... */
        }
+       
     
     /* Navbar styles */
     .navbar {
@@ -63,7 +64,7 @@
     .card {
       transition: transform .2s;
       height: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
     }
     
@@ -78,6 +79,10 @@
     .card:hover {
       transform: scale(1.05);
     }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
     /* Vertical timeline styles */
 .timeline {
     position: relative;
@@ -115,11 +120,43 @@
   }
   
     /* Footer styles */
-    .footer {
-        background-color: #343a40;
-        color: #ffffff;
+    /* Add this CSS to style.css */
+      footer {
+        background-color: #808080; /* Example background color */
         padding: 20px 0;
-    }
+      }
+
+      #contactForm {
+        max-width: 500px;
+        margin: auto;
+        padding: 1rem;
+        background: #ffffff;
+        border-radius: 5px;
+      }
+
+      #contactForm input,
+      #contactForm textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #contactForm button {
+        width: 100%;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 4px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      #contactForm button:hover {
+        background: #0056b3;
+      }
+
    
     .footer img {
         margin-right: 20px;
@@ -128,6 +165,11 @@
     }
     .footer img:hover {
         filter: grayscale(0%); /* Restore color on hover */
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 150px; /* Prevents columns from getting too narrow */
+      padding: 0 1rem; /* Adds horizontal padding */
     }
     
     
@@ -139,8 +181,11 @@
   
     /* Set the images to be fully responsive */
     .img-fluid {
-      max-width: 100%;
+      border-radius: 50%;
+      width: 90%;
       height: auto;
+      object-fit: cover;
+      aspect-ratio: 1 / 1; 
     }
   
     /* Add padding and margin tweaks as needed */
@@ -195,7 +240,14 @@
     <div class="bg-image">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#home">Saketh Dathrika</a>
+      <link rel="icon" type="image/png" href="pics/favicon.png">
+      
+      <link rel="icon" type="image/png" href="pics/favicon.png">
+<a class="navbar-brand" href="#home">
+  <img src="pics/logo.jpg" alt="Your Logo" style="height: 40px;">
+  Saketh Dathrika
+</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -241,7 +293,7 @@
       </div>
       <div class="w-50">
         <!-- Placeholder for future image -->
-        <img src="pics/intro.png" alt="placeholder" class="img-fluid" id="aboutImage">
+        <img src="pics/intro1.jpg" alt="placeholder" class="img-fluid" id="aboutImage">
       </div>
     </section>
 
@@ -254,9 +306,9 @@
           <div class="card">
             <img src="pics/restaurant.jpg" class="card-img-top" alt="Project 1">
             <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View Project</a>
+              <h5 class="card-title">Restaurant Visitor forecasting</h5>
+              <p class="card-text">Project aims to predict number of visitors to a restaurant for any given date.</p>
+              <a href="https://github.com/Saketh991/Restaurant-Visitor-forecast" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
@@ -264,9 +316,9 @@
           <div class="card">
             <img src="pics/summarization.jpg" class="card-img-top" alt="Project 2">
             <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's  content.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
+              <h5 class="card-title">BBC News Articles summarization</h5>
+              <p class="card-text">The project aims to summarize the news articles from BBC using Stacked LSTM.</p>
+                <a href="https://github.com/lasyamanthri/CS6120" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
@@ -274,9 +326,9 @@
           <div class="card">
             <img src="pics/recommendation.jpg" class="card-img-top" alt="Project 3">
             <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View Project</a>
+              <h5 class="card-title">Personalized-Recommendation-System</h5>
+              <p class="card-text">The project is helpful to recommend top 12 fashion products to the customers using differenet ML techniques.</p>
+              <a href="https://github.com/Saketh991/Personalized-Recommendation-System." class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
@@ -333,7 +385,10 @@
         <div class="col-md-6 col-lg-3 mb-3">
           <h2 class="h5 custom-font">Programming Languages</h2>
           <ul class="list-unstyled">
-            <li>Python</li>
+            <li>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Python</div>
+            </div></li>
             <li>R</li>
             <li>SQL</li>
             <li>HTML</li>
@@ -392,6 +447,15 @@
 
     <footer id="contact" class="footer text-center text-light">
       <div class="container">
+        <div class="footer-column">
+          
+          <form id="contactForm" action="https://formspree.io/f/mleqrgya" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form></div>
+        
         <a href="https://www.linkedin.com/in/saketh-dathrika/" target="_blank">
             <img src="pics/linkedin.png" alt="LinkedIn Logo" width="50" height="50">
           </a>
