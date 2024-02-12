@@ -5,235 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Science Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Basic body styles */
-    html {
-        scroll-behavior: smooth;
-      }
-
-      #about, #projects, #skills, #experience, #contact {
-        
-        padding-top: 50px; /* Adjust as needed */
-        margin-top: -50px; /* Adjust to offset the padding */
-      }
-      
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      
-      /* Example background color */
-    }
-    .bg-image {
-        
-        background-size: cover;
-        /* ...other styles... */
-       }
-       
-    
-    /* Navbar styles */
-    .navbar {
-        background: linear-gradient(45deg, #4CAF50, #2196F3);
-    }
-    
-    .navbar-dark .navbar-nav .nav-link {
-      color: rgba(255, 255, 255, .8);
-      font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 1px;
-    }
-  
-    .navbar-dark .navbar-nav .nav-link:hover {
-      color: rgba(255, 255, 255, 1);
-    }
-  
-    /* Custom font style */
-    .custom-font {
-      font-family: 'Merriweather', serif; /* Fallback fonts should be added */
-    }
-  
-    /* Underline effect for headings */
-    .custom-underline {
-      text-decoration: underline;
-      text-decoration-color: #FFC107; /* Example underline color */
-      text-decoration-thickness: 2px;
-    }
-  
-    /* Card hover effect */
-    .card {
-      transition: transform .2s;
-      height: 100%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ddd;
-    }
-    
-      .card-body {
-        height: 200px; /* Adjust the height as needed */
-      }
-      
-      .card-img-top {
-        object-fit: cover;
-        height: 150px; /* Adjust the height as needed */
-      }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-    
-    /* Vertical timeline styles */
-.timeline {
-    position: relative;
-    margin-left: 30px; /* Adjust as needed */
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: calc(100% - 20px); /* Adjust as needed */
-    
-    background: #6C757D; /* Adjust line color */
-    left: 20px; /* Adjust as needed */
-    top: 10px; /* Adjust as needed */
-  }
-  
-  .event {
-    position: relative;
-    padding-left: 30px; /* Adjust as needed */
-  }
-  
-  .event::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    /*background: #343a40;  Example dot color */
-    background: #6C757D; /* Adjust dot color */
-    border: 2px solid #343a40; /* Adjust border color */
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -15px; /* Adjust as needed */
-  }
-  
-    /* Footer styles */
-    /* Add this CSS to style.css */
-      footer {
-        background-color: #808080; /* Example background color */
-        padding: 20px 0;
-      }
-
-      #contactForm {
-        max-width: 500px;
-        margin: auto;
-        padding: 1rem;
-        background: #ffffff;
-        border-radius: 5px;
-      }
-
-      #contactForm input,
-      #contactForm textarea {
-        width: 100%;
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      #contactForm button {
-        width: 100%;
-        padding: 0.7rem;
-        border: none;
-        border-radius: 4px;
-        background: #007bff;
-        color: white;
-        cursor: pointer;
-      }
-
-      #contactForm button:hover {
-        background: #0056b3;
-      }
-
-   
-    .footer img {
-        margin-right: 20px;
-        filter: grayscale(100%); /* Desaturate the icons */
-        transition: filter 0.3s ease-in-out;
-    }
-    .footer img:hover {
-        filter: grayscale(0%); /* Restore color on hover */
-    }
-    .footer-column {
-      flex: 1;
-      min-width: 150px; /* Prevents columns from getting too narrow */
-      padding: 0 1rem; /* Adds horizontal padding */
-    }
-    
-    
-  
-    /* Background gradient for the main area */
-    .bg-gradient {
-      background: linear-gradient(45deg, #83a4d4, #b6fbff); /* Example gradient background */
-    }
-  
-    /* Set the images to be fully responsive */
-    .img-fluid {
-      border-radius: 50%;
-      width: 90%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 1 / 1; 
-    }
-  
-    /* Add padding and margin tweaks as needed */
-    
-    .my-5 {
-        margin-top: 2rem!important;
-        margin-bottom: 2rem!important;
-    }
-  
-    .mt-5 {
-      margin-top: 3rem!important;
-    }
-  
-    .pt-5 {
-      padding-top: 3rem!important;
-    }
-  
-    /* Section specific styles */
-    #about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    /* Utility classes for layout */
-    .w-50 {
-      width: 50%;
-    }
-  
-    /* Corrections for previous mistakes */
-    .col-md-6 {
-      flex: 0 0 auto;
-      width: 50%;
-    }
-    
-    .col-lg-3 {
-      flex: 0 0 auto;
-      width: 25%;
-    }
-  
-    .mb-3 {
-      margin-bottom: 1rem!important;
-    }
-  
-    .text-light {
-      color: #f8f9fa!important;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
 </head>
 <body class="bg-gradient">
@@ -261,6 +34,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
         <li class="nav-item">
           <a class="nav-link" href="#experience">Experience</a>
         </li>
@@ -283,7 +59,7 @@
             Bachelor's in ECE from GRIET, Hyderabad. My academic journey has equipped me with a 
             CGPA of 3.8/4.00 and a rich set of skills in data management, machine learning, NLP, computer vision, algorithms, and more.
         </p>
-        <p>My technical toolkit encompasses programming languages such as Python, R, SQL, and more.
+        <p>My technical tools include programming languages such as Python, R, SQL, and more.
              I hold certifications in AWS, showcasing my commitment to continuous learning and mastery of cloud-based technologies.
              Complementing my professional journey are diverse projects, which you can find by exploring my portfolio.</p>
         <p>
@@ -307,8 +83,11 @@
             <img src="pics/restaurant.jpg" class="card-img-top" alt="Project 1">
             <div class="card-body">
               <h5 class="card-title">Restaurant Visitor forecasting</h5>
-              <p class="card-text">Project aims to predict number of visitors to a restaurant for any given date.</p>
-              <a href="https://github.com/Saketh991/Restaurant-Visitor-forecast" class="btn btn-primary">View Project</a>
+              <p class="card-text">Developed this project to forecast the number of visitors to a restaurant and to find the optimal model 
+                with high accuracy by cleansing and analyzing 2.3 million data samples. Trained several regression models such as 
+                decision tree regressor , random forest , xgboost, lgbm and kneighbors regressor in which the the ensemble model 
+                of xgboost and lgbm gave us the least error.</p>
+              <a href="https://github.com/Saketh991/Restaurant-Visitor-forecast" class="btn btn-primary mt-auto align-self-center">View Project</a>
             </div>
           </div>
         </div>
@@ -317,26 +96,92 @@
             <img src="pics/summarization.jpg" class="card-img-top" alt="Project 2">
             <div class="card-body">
               <h5 class="card-title">BBC News Articles summarization</h5>
-              <p class="card-text">The project aims to summarize the news articles from BBC using Stacked LSTM.</p>
-                <a href="https://github.com/lasyamanthri/CS6120" class="btn btn-primary">View Project</a>
+              <p class="card-text">
+                The project aimed to implement text summarization and topic modeling using NLP and deep learning techniques on the BBC News Summary dataset. 
+                It employed a 3-Stack LSTM model for text summarization and LDA for topic modeling. Metrics such as log-likelihood and perplexity 
+                were used to evaluate LDA, while Rouge-1 was used for summarization</p>
+                <a href="https://github.com/lasyamanthri/CS6120" class="btn btn-primary mt-auto align-self-center">View Project</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
             <img src="pics/recommendation.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Personalized-Recommendation-System</h5>
-              <p class="card-text">The project is helpful to recommend top 12 fashion products to the customers using differenet ML techniques.</p>
-              <a href="https://github.com/Saketh991/Personalized-Recommendation-System." class="btn btn-primary">View Project</a>
+              <p class="card-text">The project is helpful to recommend top 12 fashion products to the customers using differenet ML techniques.The project is 
+                helpful to recommend top 12 fashion products to the customers using differenet ML techniques.The project is helpful to recommend top 
+                12 fashion products to the customers using differenet ML techniques.</p>
+              <a href="https://github.com/Saketh991/Personalized-Recommendation-System." class="btn btn-primary mt-auto align-self-center">View Project</a>
             </div>
           </div>
         </div>
+        <!-- Existing col-md-4 cards -->
+
+  
+
+  <!-- New Card 4 -->
+  <div class="col-md-4">
+    <div class="card">
+      <img src="pics/flan-t5.png" class="card-img-top" alt="Project 4">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Dialog Summarization along with Fine Tuning </h5>
+        <p class="card-text">Developed this project using Python, PyTorch, and Hugging Face Transformers. The project employed a Flan-T5 model to summarize conversations, 
+          addressing limitations and enhancing performance through in-context learning with one and two-shot inference. 
+          Advanced fine-tuning techniques such as Parameter-Efficient Fine-Tuning (PEFT) with LoRA were explored in the project.</p>
+        <a href="https://github.com/Saketh991/Dialog-Summarization-along-with-Fine-Tuning-" class="btn btn-primary mt-auto align-self-center">View Project</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- New Card 5 -->
+  <div class="col-md-4">
+    <div class="card">
+      <img src="pics/store.jpg" class="card-img-top" alt="Project 5">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Store Sales Forecasting</h5>
+        <p class="card-text">The project focuses on forecasting store sales using various methodologies, including exploratory 
+          data analysis (EDA) and machine learning techniques such as linear regression, XGBoost, LSTM, Prophet, and Auto ARIMA.
+           It aims to optimize inventory management and pricing strategies for retailers. Both Prophet and Auto ARIMA showcased potential for effective sales 
+           prediction as evidenced by their minimized RMSE values compared to the other models.</p>
+        <a href="https://github.com/Saketh991/Store_Sales_prediction" class="btn btn-primary mt-auto align-self-center">View Project</a>
+      </div>
+    </div>
+  </div>
+  
+  
+    
+  
+
+
       </div>
     </section>
     
-      
-        
+    <section id="education" class="my-5">
+      <h1 class="custom-font custom-underline mb-4">Education</h1>
+      <ul class="timeline-ed">
+        <li class="timeline-item">
+            <div class="timeline-item-dot-before"></div>
+            <div class="timeline-item-dot"></div>
+            <div class="timeline-item-content">
+                <h3 class="timeline-item-year">2021 - 2023</h3>
+                <p class="timeline-item-degree">Master of Science in Data Science</p>
+                <p class="timeline-item-institution">Northeastern University</p>
+                <p class="timeline-item-location">Boston, MA, USA</p>
+            </div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-item-dot-before"></div>
+            <div class="timeline-item-dot"></div>
+            <div class="timeline-item-content">
+                <h3 class="timeline-item-year">2016 - 2020</h3>
+                <p class="timeline-item-degree">Bachelor of Technology in ECE</p>
+                <p class="timeline-item-institution">GokaRaju RangaRaju Institute of Engg.</p>
+                <p class="timeline-item-location">Visakhapatnam, India</p>
+            </div>
+        </li>
+    </ul>
+    </section>
           <section id="experience" class="my-5">
             <h1 class="custom-font custom-underline mb-4">Experience</h1>
             <div class="timeline">
@@ -453,14 +298,15 @@
             <button type="submit">Send Message</button>
           </form></div>
         
-        <a href="https://www.linkedin.com/in/saketh-dathrika/" target="_blank">
-            <img src="pics/linkedin.png" alt="LinkedIn Logo" width="50" height="50">
+          <a href="https://www.linkedin.com/in/saketh-dathrika/" target="_blank">
+            <img src="pics/linkedin.png" alt="LinkedIn Logo" style="width: 36px; height: 36px;">
           </a>
           <a href="https://github.com/Saketh991" target="_blank">
-            <img src="pics/github.png" alt="GitHub Logo" width="50" height="50">
+            <img src="pics/github.png" alt="GitHub Logo" style="width: 36px; height: 36px;">
           </a>
           <a href="mailto:dathrika.s@northeastern.edu">
-            <img src="pics/email.png" alt="Email Logo" width="50" height="50">
+            <img src="pics/email.png" alt="Email Logo" style="width: 36px; height: 36px;">
+          </a>
         
       </div>
     </footer>

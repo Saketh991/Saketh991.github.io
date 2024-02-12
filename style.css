@@ -1,0 +1,333 @@
+ /* Basic body styles */
+ html {
+    scroll-behavior: smooth;
+  }
+
+  #about, #projects, #skills, #experience, #contact {
+    
+    padding-top: 50px; /* Adjust as needed */
+    margin-top: -50px; /* Adjust to offset the padding */
+  }
+  
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  
+  /* Example background color */
+}
+.custom-font, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono', monospace;
+}
+.bg-image {
+    
+    background-size: cover;
+    /* ...other styles... */
+   }
+   
+
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, .8);
+  font-weight: bold;
+font-size: 16px;
+letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Custom font style */
+.custom-font {
+  font-family: 'Merriweather', serif; /* Fallback fonts should be added */
+}
+
+/* Underline effect for headings */
+.custom-underline {
+  text-decoration: underline;
+  text-decoration-color: #FFC107; /* Example underline color */
+  text-decoration-thickness: 2px;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform .2s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column; /* Add display flex and flex direction column */
+}
+
+.card-body {
+  flex: 1; /* Flex 1 will make the card-body fill up the remaining space, ensuring footers of all cards are at the same level */
+  padding: 1.25rem; /* Adjust padding as needed */
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* Adjust the height as needed */
+  width: 100%; /* Ensure the image covers the full width */
+}
+
+/* Make the .card-title, .card-text and a tag inside .card take up the space they need */
+.card-title, .card-text, .card a {
+  margin: 0;
+}
+
+/* Fix for cards layout on smaller screens */
+@media (max-width: 768px) {
+  .card {
+    display: block;
+  }
+
+  .card-body {
+    display: grid;
+    flex: 0;
+  }
+}
+
+
+  
+.card:hover {
+  transform: scale(1.05);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+}
+
+.timeline-ed{
+    list-style: none;
+    padding: 0;
+}
+
+/* Timeline items */
+.timeline-item {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Timeline item content */
+.timeline-item-content {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* Timeline item dot */
+.timeline-item-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+/* Timeline item dot before */
+.timeline-item-dot-before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Timeline item year */
+.timeline-item-year {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Timeline item degree */
+.timeline-item-degree {
+    font-style: italic;
+}
+
+/* Timeline item institution */
+.timeline-item-institution {
+    font-weight: bold;
+}
+
+/* Timeline item location */
+.timeline-item-location {
+    font-style: italic;
+}
+
+.container-1 h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.container-1 p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+/* Vertical timeline styles */
+.timeline {
+position: relative;
+margin-left: 30px; /* Adjust as needed */
+}
+
+.timeline::before {
+content: '';
+position: absolute;
+width: 3px;
+height: calc(100% - 20px); /* Adjust as needed */
+
+background: #6C757D; /* Adjust line color */
+left: 20px; /* Adjust as needed */
+top: 10px; /* Adjust as needed */
+}
+
+.event {
+position: relative;
+padding-left: 30px; /* Adjust as needed */
+}
+
+.event::before {
+content: '';
+position: absolute;
+width: 12px;
+height: 12px;
+/*background: #343a40;  Example dot color */
+background: #6C757D; /* Adjust dot color */
+border: 2px solid #343a40; /* Adjust border color */
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+left: -15px; /* Adjust as needed */
+}
+
+/* Footer styles */
+/* Add this CSS to style.css */
+  footer {
+    background-color: #808080; /* Example background color */
+    padding: 20px 0;
+  }
+
+  #contactForm {
+    max-width: 500px;
+    margin: auto;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 5px;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #contactForm button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+
+  #contactForm button:hover {
+    background: #0056b3;
+  }
+
+
+.footer img {
+    margin-right: 20px;
+    filter: grayscale(100%); /* Desaturate the icons */
+    transition: filter 0.3s ease-in-out;
+}
+.footer img:hover {
+    filter: grayscale(0%);
+    opacity: 0.8; /* Restore color on hover */
+}
+.footer-column {
+  flex: 1;
+  min-width: 150px; /* Prevents columns from getting too narrow */
+  padding: 0 1rem; /* Adds horizontal padding */
+}
+
+
+
+/* Background gradient for the main area */
+.bg-gradient {
+  background: linear-gradient(45deg, #83a4d4, #b6fbff); /* Example gradient background */
+}
+
+/* Set the images to be fully responsive */
+.img-fluid {
+  border-radius: 50%;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; 
+}
+
+/* Add padding and margin tweaks as needed */
+
+.my-5 {
+    margin-top: 2rem!important;
+    margin-bottom: 2rem!important;
+}
+
+.mt-5 {
+  margin-top: 3rem!important;
+}
+
+.pt-5 {
+  padding-top: 3rem!important;
+}
+
+/* Section specific styles */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility classes for layout */
+.w-50 {
+  width: 50%;
+}
+
+/* Corrections for previous mistakes */
+.col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-lg-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.mb-3 {
+  margin-bottom: 1rem!important;
+}
+
+.text-light {
+  color: #f8f9fa!important;
+}
